@@ -1,98 +1,136 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  /* Sizes */
+  --font-size-xsmall: .75rem;   /* 12px */
+  --font-size-small: .875rem;   /* 14px */
+  --font-size-normal: 1rem;     /* 16px */
+  --font-size-medium: 1.125rem; /* 18px */
+  --font-size-large: 1.5rem;    /* 24px */
+  --font-size-xlarge: 2rem;     /* 32px */
+  --font-size-xxlarge: 3rem;    /* 48px */
+  --font-size-xxxlarge: 4rem;   /* 64px */
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
+  --space-0: 0;      /*  0px */
+  --space-1: .25rem; /*  4px */
+  --space-2: .5rem;  /*  8px */
+  --space-3: .75rem; /* 12px */
+  --space-4: 1rem;   /* 16px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem;   /* 32px */
+  --space-7: 3rem;   /* 48px */
+  --space-8: 4rem;   /* 64px */
+  --space-9: 5rem;   /* 64px */
+  --space-10: 6rem;   /* 64px */
+  --space-11: 7rem;   /* 64px */
+  --space-12: 8rem;   /* 64px */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+  /* Colors */
+  --color-green-100-base: 151, 38%, 71%; /* #9AD2B7 */
+  --color-green-200-base: 151, 38%, 64%; /* #81C7A5 */
+  --color-green-300-base: 151, 38%, 57%; /* #68BB93 */
+  --color-green-400-base: 151, 38%, 50%; /* #4FB081 */
+  --color-green-500-base: 151, 38%, 43%; /* #44976F */
+  --color-green-600-base: 151, 38%, 36%; /* #387E5C */
+  --color-green-700-base: 151, 38%, 29%; /* #2D654A */
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  --color-green-100: hsla(var(--color-green-100-base), 1);
+  --color-green-200: hsla(var(--color-green-200-base), 1);
+  --color-green-300: hsla(var(--color-green-300-base), 1);
+  --color-green-400: hsla(var(--color-green-400-base), 1);
+  --color-green-500: hsla(var(--color-green-500-base), 1);
+  --color-green-600: hsla(var(--color-green-600-base), 1);
+  --color-green-700: hsla(var(--color-green-700-base), 1);
+
+  --color-purple-100-base: 331, 38%, 71%; /* #D29AB5 */
+  --color-purple-200-base: 331, 38%, 64%; /* #C781A3 */
+  --color-purple-300-base: 331, 38%, 57%; /* #BB6890 */
+  --color-purple-400-base: 331, 38%, 50%; /* #B04F7E */
+  --color-purple-500-base: 331, 38%, 43%; /* #97446C */
+  --color-purple-600-base: 331, 38%, 36%; /* #7E385A */
+  --color-purple-700-base: 331, 38%, 29%; /* #652D48 */
+
+  --color-purple-100: hsla(var(--color-purple-100-base), 1);
+  --color-purple-200: hsla(var(--color-purple-200-base), 1);
+  --color-purple-300: hsla(var(--color-purple-300-base), 1);
+  --color-purple-400: hsla(var(--color-purple-400-base), 1);
+  --color-purple-500: hsla(var(--color-purple-500-base), 1);
+  --color-purple-600: hsla(var(--color-purple-600-base), 1);
+  --color-purple-700: hsla(var(--color-purple-700-base), 1);
+
+  --color-white-base: 0, 100%, 100%;
+  --color-white: hsla(var(--color-white-base), 1);
+  --color-off-white-base: 0, 10%, 99%;
+  --color-off-white: hsla(var(--color-off-white-base), 1);
+  --color-gray-hover: #F9F6F6;
+  --color-gray-100: #E9E6E6;
+  --color-gray-200: #D0CFCF;
+  --color-gray-300: #AFACAC;
+  --color-gray-400: #898686;
+  --color-gray-500: #6D6B6B;
+  --color-gray-600: #5A5757;
+  --color-gray-700: #252424;
+
+
+
+
+  /* Variables TODO get a good name for this section */
+  --text-color-primary: var(--color-gray-600);
+  --text-color-secondary: var(--color-gray-500);
+  --text-color-light: #ffffff;
+  --text-color-link: var(--color-purple-600);
+  --text-color-darkblue: var(--color-blue-700);
+
+  --background-color: var(--color-gray-200); 
+
+  --color-primary: var(--color-green-400);
+  --color-primary-hover: var(--color-green-500);
+  --color-primary-active: var(--color-green-600);
+  --color-secondary: var(--color-purple-400);
+  --color-secondary-hover: var(--color-purple-500);
+  --color-secondary-active: var(--color-purple-600);
+
+
+  --border-radius: 10px;
+  
+  --color-green-success: #51F0A9;
+
+  --input-border-color: var(--color-gray-300);
+  --placeholder-color: var(--color-gray-300);
+  --input-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  --card-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --card-shadow-hover: rgba(0, 0, 0, 0.3) 0px 4px 25px;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 16px;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  color: var(--text-color-primary);
+  font-size: var(--font-size-normal);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  background-color: var(--background-color);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rbg(--foreground-rgb);
 }
 
 a {
@@ -100,8 +138,36 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  color: var(--text-color-primary);
+}
+
+h1 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xxlarge);
+}
+
+h2 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xlarge);
+}
+
+h3 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+}
+
+h4 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-medium);
+}
+
+h5 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-normal);
 }
